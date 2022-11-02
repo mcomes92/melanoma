@@ -22,9 +22,9 @@ for (i in annotations){
 
 /***** Tile creation *****/ 
 selectAnnotations()
-// settaggio parametri tiles
+// setting tiles parameters
 runPlugin('qupath.lib.algorithms.TilerPlugin', '{"tileSizeMicrons": 110.0,  "trimToROI": true,  "makeAnnotations": true,  "removeParentAnnotation": false}');
-// elimino area grande su cui ho trovato tiles
+
 def annotations2 = getAnnotationObjects()
 
 //Keep Tiles and exclude first annotations
@@ -66,7 +66,7 @@ for (tile in tiles){
 }
 
 
-// classificatore su tiles
+// cell detection on tiles
 selectAnnotations()
 runPlugin('qupath.imagej.detect.cells.WatershedCellDetection', '{"detectionImageBrightfield": "Hematoxylin OD",  "requestedPixelSizeMicrons": 0.5,  "backgroundRadiusMicrons": 8.0,  "medianRadiusMicrons": 0.0,  "sigmaMicrons": 1.5,  "minAreaMicrons": 10.0,  "maxAreaMicrons": 400.0,  "threshold": 0.1,  "maxBackground": 2.0,  "watershedPostProcess": true,  "cellExpansionMicrons": 5.0,  "includeNuclei": true,  "smoothBoundaries": true,  "makeMeasurements": true}');
 
