@@ -27,7 +27,6 @@ end
 %% create training/test splitting 
 name_dir = ['D:\digital pathology\melanoma project\extracted_data\',net_name,'\feat_crops\training_test_split\'];
 mkdir(name_dir)
-
 id_tot = [id];
 gt_tot = [gt];
 id_count_tot = [id_count];
