@@ -4,5 +4,5 @@ Finding quantitative imaging biomarkers from WSIs directly for the prediction of
 crucial to optimize patient management. In this study, we designed a deep learning-based model with the aim of learning prognostic biomarkers 
 from WSIs to predict 1-year DFS in cutaneous melanoma patients. 
 ## Requirements
-QuPath software //
-Matlab
+- QuPath software
+- Matlab
