@@ -46,7 +46,7 @@ def server = getCurrentServer()
 // Define output path (here, relative to project)
 def name = GeneralTools.getNameWithoutExtension(imageData.getServer().getMetadata().getName())
 
-def pathOutput = "D:\\oncologico\\digital pathology\\progetto melanoma_no_cell_class\\Ti2les\\"+name+"\\"
+def pathOutput = "D:\\digital pathology\\melanoma project\\Ti2les\\"+name+"\\"
 //Define what you want to export here
 tiles = getAnnotationObjects()//getDetectionObjects().findAll{it.getPathClass() != null}
 
