@@ -27,13 +27,13 @@ for nr = 1: NumRounds
         %% feature selection: features whose AUC value was greater than 0.6 were retained
         id_auc = [];
         for k = 1:size(feat_train0,2)
-            [~,~,~,auc] = perfcurve(label_tot,feat_train0(:,k),1);  
+            [~,~,~,auc] = perfcurve(GT_train,feat_train0(:,k),1);  
             if auc>=0.6
                 id_auc = [id_auc k];   
             end
         end
-        feat_train = feat_train(:,id_auc);
-        feat_test = feat_test(:,id_auc);
+        feat_train = feat_train0(:,id_auc);
+        feat_test = feat_test0(:,id_auc);
         clear id_auc
         %% principal component analysis
         [coeff,scoreTrain,latent,tsquared,explained,mu] = pca(feat_train);
